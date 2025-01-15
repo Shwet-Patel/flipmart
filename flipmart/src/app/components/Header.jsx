@@ -1,4 +1,3 @@
-'useclient';
 import React from 'react'
 
 

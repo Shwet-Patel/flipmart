@@ -1,15 +1,9 @@
-import { Geist, Geist_Mono } from "next/font/google";
+"useclient";
+
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Link from "next/link";
 
 export const metadata = {
   title: "Flipmart",
@@ -19,10 +13,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
+        <Header />
         {children}
+        <div className="py-8">
+          <Link href={"./123"}>go here</Link>
+        </div>
+        <Footer />
       </body>
     </html>
   );
